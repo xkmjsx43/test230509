@@ -27,12 +27,22 @@ __ git push -u github master
 branch 
 -- 分支
 
+HEAD 
+-- 指標
 git checkout [commit hash]
 -- 查看commit hash 
 
 git checkout [branchName]
 -- 返回最新的分支版本
 
+
+*** 工作目錄處理 ***
+git clean -n
+-- 顯示此次清除的檔案(untrack)
+git clean -f
+-- 清除此次的檔案(untrack)
+git reset HEAD
+-- 加入索引的檔案還原到工作目錄
 
 
 git init
