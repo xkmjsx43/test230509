@@ -6,8 +6,32 @@ git config --global user.email "userEmail"
 -- 設定使用者email
 
 git config --list
-*** 新專案建立 基本流程 ***
-1. new file > project
+-- 查詢設定
+
+
+*** 新專案建立 基本流程(本地) ***
+git init 
+-- new project build repository
+
+*** 新專案建立 基本流程(遠端) ***
+git remote add origin [網址]
+-- 註冊遠端儲存庫
+
+git push -u origin master 
+-- 推到預設的遠端數據庫
+-- origin預設的遠端數據庫名稱(可以修改它的遠端數據庫名稱)
+__ git push -u github master
+
+
+*** 知識 ***
+branch 
+-- 分支
+
+git checkout [commit hash]
+-- 查看commit hash 
+
+git checkout [branchName]
+-- 返回最新的分支版本
 
 
 
@@ -93,7 +117,7 @@ git clone [REPO]
 git pull
 -- 更新同步REPO(把gitHub上的資料拉下來)
 
-git push
+git push origin master
 -- 更新同步REPO(把資料推上gitHub上)
 
 git push -u [new-branch]
