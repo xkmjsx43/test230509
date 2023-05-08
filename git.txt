@@ -90,9 +90,17 @@ git add [檔案名稱.副檔名]
 __ git add git.txt
 -- 選擇要存下來的檔案(索引/加入追蹤tracked)
 
+git reset [檔案名稱.副檔名]
+-- 檔案取消索引
+git reset [檔案名稱.副檔名] --hard
+-- 檔案取消索引回到commit hash狀態
+
 git add .
 -- 全部都要存下來(索引)
-
+git reset 
+-- 全部取消索引
+git reset --hard
+-- 全部取消索引回到commit hash狀態
 
 git status 
 -- 確認版控狀態
