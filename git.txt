@@ -28,7 +28,7 @@ branch
 
 HEAD 
 -- 指標
-git checkout [commit hash]
+git checkout ["commit hash"]
 -- 查看commit hash 
 
 git checkout [branchName]
@@ -70,7 +70,7 @@ git reset —hard ORIG_HEAD
 -- 還原合併前狀態
 git merge --abort
 -- 取消衝突狀態
-git branch [新分支名稱] [commit編號]
+git branch [新分支名稱] ["commit hash"]
 -- 將特定 commit 貼上分支
 
 
@@ -97,7 +97,7 @@ git add .
 git status 
 -- 確認版控狀態
 
-git commit -m "[訊息內容必填]"
+git commit -m ["訊息內容必填"]
 !! m === msg
 __ git commit -m "eric first time"
 -- 存檔
@@ -121,7 +121,7 @@ git checkout -
 -- 支線來回切換
 
 git branch -d [支線名]
--- 刪掉主線
+-- 刪掉支線
 
 git log 
 -- 查看存檔紀錄(commit 記錄)
@@ -134,7 +134,7 @@ git reset -- hard
 
 *** cherry pick ***
 ○○●○○
-git cherry pick [commit hash]
+git cherry pick ["commit hash"]
 -- 選取要留下的部份
 
 *** 救資料 ***
@@ -146,7 +146,7 @@ git checkout .
 -- 通通拉回來
 
 *** 突然要做別的事情 又不想commit非常好用 ***
-git stash save "[名稱]"
+git stash save ["名稱"]
 -- 暫時存檔(會把存檔消掉)
 
 git stash list 
