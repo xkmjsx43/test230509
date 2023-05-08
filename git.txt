@@ -1,10 +1,8 @@
 *** 基本設置 ***
 git config --global user.name "userName"
 -- 設定使用者名稱
-
 git config --global user.email "userEmail"
 -- 設定使用者email
-
 git config --list
 -- 查詢設定
 
@@ -12,6 +10,7 @@ git config --list
 *** 新專案建立 基本流程(本地) ***
 git init 
 -- new project build repository
+
 
 *** 新專案建立 基本流程(遠端) ***
 git remote add origin [網址]
@@ -43,7 +42,46 @@ git clean -f
 -- 清除此次的檔案(untrack)
 git reset HEAD
 -- 加入索引的檔案還原到工作目錄
+git reset HEAD^^ --hard
+-- 還原至前兩個版本
+git reflog 
+-- 察看詳細歷史紀錄
+git reset "Commit Hash" --hard
+-- 還原至特定commit hash
 
+
+*** 分支處理 ***
+git branch [分支名稱]
+-- 建立新分支
+git branch 
+-- 查看分支
+git checkout [分支名稱]
+-- 切換分支
+git checkout -d [分支名稱]
+-- 刪除分支
+
+git merge [分支名稱]
+-- 合併分支
+git merge [分支名稱] --no-ff
+-- 取消快轉，兩個不同任務分支合併時，取消快轉
+git log —oneline -graph
+-- 觀看線圖
+git reset —hard ORIG_HEAD
+-- 還原合併前狀態
+git merge --abort
+-- 取消衝突狀態
+git branch [新分支名稱] [commit編號]
+-- 將特定 commit 貼上分支
+
+
+*** 常見分支名稱 ***
+* master 預設分支
+* develop 開發分支
+* feature 開發新功能分支
+
+*** checkout與reset差異 ***
+* checkout 是移動 HEAD
+* reset 是移動 branch
 
 git init
 -- 初始化
